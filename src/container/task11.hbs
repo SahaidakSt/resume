@@ -1,0 +1,191 @@
+<main>
+  <div class='row g5'>
+    <section class='col-12'>
+      {{#each types}}
+        <div class='btn btn-link'>{{this}}</div>
+      {{/each}}
+
+    </section>
+    <section class='col-12'>
+      <div class='card'>
+        <div class='card-body'>
+          <h1 class='card-title'>{{name}}</h1>
+          <p>{{description}}</p>
+          <a
+            href='/skills'
+            class='btn btn-primary'
+          >{{history.founder}}</a>
+          <a
+            href='/skills'
+            class='btn btn-danger'
+          >{{history.year}}</a>
+        </div>
+      </div>
+    </section>
+
+    <section col-3>
+      {{#with syntax}}
+        <div class='dropdown'>
+          <button
+            class='btn btn-secondary dropdown-toggle'
+            type='button'
+            data-bs-toggle='dropdown'
+            aria-expanded='false'
+          >
+            Dropdown button
+          </button>
+          <ul class='dropdown-menu'>
+            {{#each variables}}
+              <li>
+                <a class='dropdown-item' href='#'>
+                  {{this}}
+                </a>
+              </li>
+            {{/each}}
+          </ul>
+        </div>
+        <br />
+
+        <div class='dropdown'>
+          <button
+            class='btn btn-secondary dropdown-toggle'
+            type='button'
+            data-bs-toggle='dropdown'
+            aria-expanded='false'
+          >
+            Dropdown button
+          </button>
+          <ul class='dropdown-menu'>
+            {{#each functions}}
+              <li>
+                <a class='dropdown-item' href='#'>
+                  {{this}}
+                </a>
+              </li>
+            {{/each}}
+          </ul>
+        </div>
+        <br />
+        <div class='dropdown'>
+          <button
+            class='btn btn-secondary dropdown-toggle'
+            type='button'
+            data-bs-toggle='dropdown'
+            aria-expanded='false'
+          >
+            Dropdown button
+          </button>
+          <ul class='dropdown-menu'>
+            {{#each conditionals}}
+              <li>
+                <a class='dropdown-item' href='#'>
+                  {{this}}
+                </a>
+              </li>
+            {{/each}}
+          </ul>
+        </div>
+        <br />
+        <div class='dropdown'>
+          <button
+            class='btn btn-secondary dropdown-toggle'
+            type='button'
+            data-bs-toggle='dropdown'
+            aria-expanded='false'
+          >
+            Dropdown button
+          </button>
+          <ul class='dropdown-menu'>
+            {{#each loops}}
+              <li>
+                <a class='dropdown-item' href='#'>
+                  {{this}}
+                </a>
+              </li>
+            {{/each}}
+          </ul>
+        </div>
+        <br />
+        <div class='dropdown'>
+          <button
+            class='btn btn-secondary dropdown-toggle'
+            type='button'
+            data-bs-toggle='dropdown'
+            aria-expanded='false'
+          >
+            Dropdown button
+          </button>
+          <ul class='dropdown-menu'>
+            {{#each classes}}
+              <li>
+                <a class='dropdown-item' href='#'>
+                  {{this}}
+                </a>
+              </li>
+            {{/each}}
+          </ul>
+        </div>
+      {{/with}}
+    </section>
+
+    <nav
+      style="--bs-breadcrumb-divider: '>';"
+      aria-label='breadcrumb'
+    >
+      <ol class='breadcrumb'>
+        {{#each libraries}}
+          <li class='breadcrumb-item'>
+            <a href='#'>{{this}}</a>
+          </li>
+        {{/each}}
+
+      </ol>
+    </nav>
+
+    <section>
+      <ul>
+        {{#each tools}}
+          <li>
+            <h5>{{this}}
+              <span class='badge bg-secondary'>
+                New
+              </span>
+            </h5>
+          </li>
+        {{/each}}
+      </ul>
+    </section>
+
+    {{#each community}}
+      <section class='col-12'>
+        <p>
+          <a
+            class='btn btn-primary'
+            data-bs-toggle='collapse'
+            href='#collapseExample'
+            role='button'
+            aria-expanded='false'
+            aria-controls='collapseExample'
+          >
+            {{type}}
+          </a>
+          <button
+            class='btn btn-primary'
+            type='button'
+            data-bs-toggle='collapse'
+            data-bs-target='#collapseExample'
+            aria-expanded='false'
+            aria-controls='collapseExample'
+          >
+            Button with data-bs-target
+          </button>
+        </p>
+        <div class='collapse' id='collapseExample'>
+          <div class='card card-body'>
+            {{name}}
+          </div>
+        </div>
+      </section>
+    {{/each}}
+  </div>
+</main>
