@@ -811,7 +811,6 @@ router.get('/task22', function (req, res) {
 
 // ================================================================
 
-<<<<<<< HEAD
 router.get('/task11', function (req, res) {
   // res.render генерує нам HTML сторінку
 
@@ -887,7 +886,12 @@ router.get('/task11', function (req, res) {
         type: 'blog',
       },
     ],
-=======
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})
+
+// ================================================================
+
 router.get('/task31', function (req, res) {
   // res.render генерує нам HTML сторінку
 
@@ -1138,7 +1142,6 @@ router.get('/task31', function (req, res) {
         },
       ],
     },
->>>>>>> 3814ea68d1ecc1b954d41fc4c1b33be58429890c
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
