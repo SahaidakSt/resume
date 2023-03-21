@@ -1,338 +1,90 @@
-<main {{! class='text-bg-warning' }}>
+{{! Lesson 4 }}
 
-  <div class='row gy-5'>
-
-    <section class='col-12'>
-      <div class='card text-bg-dark'>
-        <img
-          class='card-img-top'
-          src='https://picsum.photos/400/200'
-          alt='Product photo'
-        />
-        <div class='card-body'>
-          <h5 class='card-title text-bg-primary'>Produkt
-            #12345</h5>
-          <p class='text-bg-secondary'>
-            Ноутбук Asus ROG Strix G15
-            <br />
-            G513IC-HN004</p>
-          <a href='/work' class='btn btn-primary'>Open</a>
+<main class='p-5'>
+  <div class='row'>
+    <div class='col-12 mb-5'>
+      <div class='nav nav-tabs'>
+        <div class='nav-item'>
+          <a href='#' class='nav-link'>Home</a>
+        </div>
+        <div class='nav-item'>
+          <a href='#' class='nav-link active'>Bootstrap</a>
+        </div>
+        <div class='nav-item'>
+          <a href='#' class='nav-link disabled'>FAQ</a>
         </div>
       </div>
-    </section>
-
-    <section class='col-3'>
+    </div>
+  </div>
+  <div class='row g-4'>
+    <div class='col-5 pe-5'>
       <div class='card'>
-        <div class='card-header'>
-          <div>Menu</div>
+        <div class='pt-4 pb-3 px-4'>
+          <div class='nav flex-column'>
+            <div class='nav-item mb-2'>
+              <div class='card'>
+                <a href='#' class='nav-link'>Home</a>
+              </div>
+            </div>
+            <div class='nav-item mb-2'>
+              <div class='card'>
+                <a
+                  href='#'
+                  class='nav-link active'
+                >Bootstrap</a>
+              </div>
+            </div>
+            <div class='nav-item mb-2'>
+              <div class='card'>
+                <a
+                  href='#'
+                  class='nav-link disabled'
+                >FAQ</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class='col-7'>
+      <div class='row'>
+        <div class='col-12'>
+          <ol class='breadcrumb'>
+            <li class='breadcrumb-item'>
+              <a href='#'>Home</a>
+            </li>
+            <li class='breadcrumb-item'>
+              <a href='#'>PC and Notebook</a>
+            </li>
+            <li class='breadcrumb-item'>
+              MacBook
+            </li>
+          </ol>
         </div>
 
-        <ul class='list-group'>
-          <li class='list-group-item'>
-            <a href='/' class='btn btn-link'>Home page</a>
-          </li>
-          <li class='list-group-item'>
-            <a href='/summary' class='btn btn-link'>Summary
-              page</a>
-          </li>
-          <li class='list-group-item'>
-            <a href='/skills' class='btn btn-link'>Skills
-              page</a>
-          </li>
-        </ul>
-        <div class='card-footer'>
-          <button class='btn btn-dark btn-sm'>
-            Update list
+        <div class='col-12'>
+          <button class='btn btn-primary rounded-pill mb-3'>
+            Click
           </button>
+          <div class='alert alert-dark'>
+
+            <h6 class='mb-2'>Hello world!
+              <span
+                class='badge text-bg-warning text-uppercase rounded-pill'
+              >Top продаж</span>
+            </h6>
+
+            <p class='m-0'>This is info p</p>
+
+          </div>
+
         </div>
+
       </div>
-    </section>
 
-    <section class='col-9'>
-      <table class='table table-bordered table-striped'>
-        <thead>
-          <tr>
-            <th>
-              #id
-            </th>
-            <th>
-              name
-            </th>
-            <th>
-              age
-            </th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <tr>
-            <th>1</th>
-            <td>Jhon</td>
-            <td>35</td>
-          </tr>
-          <tr>
-            <th>2</th>
-            <td>Ivan</td>
-            <td>37</td>
-          </tr>
-          <tr>
-            <th>3</th>
-            <td>Stepan</td>
-            <td>47</td>
-          </tr>
-          <tr>
-            <th>1</th>
-            <td>Jhon</td>
-            <td>35</td>
-          </tr>
-          <tr>
-            <th>2</th>
-            <td>Ivan</td>
-            <td>37</td>
-          </tr>
-          <tr>
-            <th>3</th>
-            <td>Stepan</td>
-            <td>47</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-
-    <section class='col-12'>
-      <div class='row g-2'>
-        <div class='col-3'>
-          <div class='card text-bg-success text-center'>
-            <div class='card-header'>Header</div>
-            <div class='card-body text-center'>
-              <h6 class='card-title'>This is title</h6>
-              <p>This is content of our box</p>
-              <button class='btn btn-light'>Click</button>
-            </div>
-            <div class='card-footer'>Footer</div>
-          </div>
-        </div>
-        <div class='col-3'>
-          <div class='card text-bg-success text-center'>
-            <div class='card-header'>Header</div>
-            <div class='card-body text-center'>
-              <h6 class='card-title'>This is title</h6>
-              <p>This is content of our box</p>
-              <button class='btn btn-light'>Click</button>
-            </div>
-            <div class='card-footer'>Footer</div>
-          </div>
-        </div>
-        <div class='col-3'>
-          <div class='card text-bg-success text-center'>
-            <div class='card-header'>Header</div>
-            <div class='card-body text-center'>
-              <h6 class='card-title'>This is title</h6>
-              <p>This is content of our box</p>
-              <button class='btn btn-light'>Click</button>
-            </div>
-            <div class='card-footer'>Footer</div>
-          </div>
-        </div>
-        <div class='col-3'>
-          <div class='card text-bg-success text-center'>
-            <div class='card-header'>Header</div>
-            <div class='card-body text-center'>
-              <h6 class='card-title'>This is title</h6>
-              <p>This is content of our box</p>
-              <button class='btn btn-light'>Click</button>
-            </div>
-            <div class='card-footer'>Footer</div>
-          </div>
-        </div>
-      </div>
-    </section>
+    </div>
 
   </div>
 
-  {{!-- <div class='card text-bg-dark'>
-    <img
-      class='card-img-top'
-      src='https://picsum.photos/400/200'
-      alt='Product photo'
-    />
-    <div class='card-body'>
-      <h5 class='card-title text-bg-primary'>Produkt #12345</h5>
-      <p class='text-bg-secondary'>
-        Ноутбук Asus ROG Strix G15
-        <br />
-        G513IC-HN004</p>
-      <a href='/work' class='btn btn-primary'>Open</a>
-    </div>
-  </div>
-  <br />
-  <br />
-
-  {{! <ul class='list-group'>
-    <li class='list-group-item'>
-      <ul class='list-group'>
-        <li class='list-group-item'>Item 1.1</li>
-        <li class='list-group-item'>Item 1.2</li>
-
-      </ul>
-    </li>
-    <li class='list-group-item'>Item 2</li>
-    <li class='list-group-item'>Item 3</li>
-
-  </ul> }}
-
-  <div class='card text-bg-primary'>
-    <div class='card-header'>
-      <div>Menu</div>
-    </div>
-
-    <ul class='list-group'>
-      <li class='list-group-item text-bg-secondary'>
-        <a href='/' class='btn btn-link'>Home page</a>
-      </li>
-      <li class='list-group-item text-bg-warning'>
-        <a href='/summary' class='btn btn-link'>Summary page</a>
-      </li>
-      <li class='list-group-item text-bg-dark'>
-        <a href='/skills' class='btn btn-link'>Skills page</a>
-      </li>
-    </ul>
-    <div class='card-footer'>
-      <button class='btn btn-dark btn-sm'>
-        Update list
-      </button>
-    </div>
-  </div>
-
-  <br />
-  <br />
-  <br />
-  <table class='table table-bordered table-striped'>
-    <thead>
-      <tr>
-        <th>
-          #id
-        </th>
-        <th>
-          name
-        </th>
-        <th>
-          age
-        </th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <tr>
-        <th>1</th>
-        <td>Jhon</td>
-        <td>35</td>
-      </tr>
-      <tr>
-        <th>2</th>
-        <td>Ivan</td>
-        <td>37</td>
-      </tr>
-      <tr>
-        <th>3</th>
-        <td>Stepan</td>
-        <td>47</td>
-      </tr>
-      <tr>
-        <th>1</th>
-        <td>Jhon</td>
-        <td>35</td>
-      </tr>
-      <tr>
-        <th>2</th>
-        <td>Ivan</td>
-        <td>37</td>
-      </tr>
-      <tr>
-        <th>3</th>
-        <td>Stepan</td>
-        <td>47</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <br /><br />
-
-  {{! <div class='card'>
-    <div class='card-body'>
-      <div class='card-title'>Title</div>
-      This is content of our box
-    </div>
-  </div> }}
-
-  {{! <div class='card text-bg-success text-center'>
-    <div class='card-header'>Header</div>
-    <div class='card-body text-center'>
-      <h6 class='card-title'>This is title</h6>
-      <p>This is content of our box</p>
-      <button class='btn btn-light'>Click</button>
-    </div>
-    <div class='card-footer'>Footer</div>
-  </div> }}
-
-  <br />
-  <br />
-
-  <div class='row gx-3 gy-2'>
-    <div class='col-4'>
-      <div class='card text-bg-success text-center'>
-        <div class='card-header'>Header</div>
-        <div class='card-body text-center'>
-          <h6 class='card-title'>This is title</h6>
-          <p>This is content of our box</p>
-          <button class='btn btn-light'>Click</button>
-        </div>
-        <div class='card-footer'>Footer</div>
-      </div>
-    </div>
-    <div class='col-4'>
-      <div class='card text-bg-success text-center'>
-        <div class='card-header'>Header</div>
-        <div class='card-body text-center'>
-          <h6 class='card-title'>This is title</h6>
-          <p>This is content of our box</p>
-          <button class='btn btn-light'>Click</button>
-        </div>
-        <div class='card-footer'>Footer</div>
-      </div>
-    </div>
-    <div class='col-4'>
-      <div class='card text-bg-success text-center'>
-        <div class='card-header'>Header</div>
-        <div class='card-body text-center'>
-          <h6 class='card-title'>This is title</h6>
-          <p>This is content of our box</p>
-          <button class='btn btn-light'>Click</button>
-        </div>
-        <div class='card-footer'>Footer</div>
-      </div>
-    </div>
-    <div class='col-4'>
-      <div class='card text-bg-success text-center'>
-        <div class='card-header'>Header</div>
-        <div class='card-body text-center'>
-          <h6 class='card-title'>This is title</h6>
-          <p>This is content of our box</p>
-          <button class='btn btn-light'>Click</button>
-        </div>
-        <div class='card-footer'>Footer</div>
-      </div>
-    </div>
-    <div class='col-4'>
-      <div class='card text-bg-success text-center'>
-        <div class='card-header'>Header</div>
-        <div class='card-body text-center'>
-          <h6 class='card-title'>This is title</h6>
-          <p>This is content of our box</p>
-          <button class='btn btn-light'>Click</button>
-        </div>
-        <div class='card-footer'>Footer</div>
-      </div>
-    </div>
-  </div> --}}
 </main>
