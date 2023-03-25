@@ -1,0 +1,29 @@
+<section class='row'>
+  {{#with newsBlock}}
+    <div class='display-5 text-center'>{{title}}</div>
+    {{#each cards}}
+      <section class='col-3 p-1'>
+        <div class='card text-bg-dark text-light'>
+          <div class='card-header'>
+            {{title}}
+            {{#if idNew}}
+              <span
+                class='badge text-bg-success rounded-pill'
+              >Нова
+              </span>
+            {{/if}}
+            {{#if isTop}}
+              <span
+                class='badge text-bg-danger rounded-pill'
+              >Топ
+              </span>
+            {{/if}}
+          </div>
+          <div class='card-body'>
+            <p>{{description}}</p>
+          </div>
+        </div>
+      </section>
+    {{/each}}
+  {{/with}}
+</section>

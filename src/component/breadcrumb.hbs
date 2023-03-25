@@ -1,0 +1,13 @@
+<nav>
+  <ol class='breadcrumb'>
+    {{#each breadcrumb}}
+      {{#unless @last}}
+        <li class='breadcrumb-item'><a
+            href={{url}}
+          >{{name}}</a></li>
+      {{else}}
+        <li class='breadcrumb-item active'>{{name}}</li>
+      {{/unless}}
+    {{/each}}
+  </ol>
+</nav>
