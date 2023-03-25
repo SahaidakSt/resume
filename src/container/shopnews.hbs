@@ -1,0 +1,25 @@
+<main>
+    {{>breadcrumb}}
+    <section class='mb-3'>
+        {{#with newsData}}
+        <div class='row'>
+            <div class='col-12'>
+                <div>
+                    <img src={{photo}} alt='' class='card-img-top' />
+                    {{#with head}}
+                    <h2>{{heading}}</h2>
+                    <p>{{description}}</p>
+                    {{/with}}
+                    {{#each body}}
+                    <h5>{{title}}</h5>
+                    <p>{{text}}</p>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+        {{/with}}
+    </section>
+    <hr />
+    {{>shoppost newsBlock=newsOtherBlock}}
+    <hr>
+</main>
