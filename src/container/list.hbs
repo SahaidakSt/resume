@@ -1,0 +1,22 @@
+{{!-- Lesson 5 --}}
+
+
+<div class="p-5">
+    <ul>
+        {{#each list}}
+        <li>
+            {{!-- {{#if @first}} <button>{{name}}</button> {{/if}} --}}
+            <button {{#if @last }} disabled{{/if}}>{{name}} - {{@index}}
+            </button>
+            {{!-- <span>{{name}}</span> --}}
+        </li>
+        {{/each}}
+
+        <hr>
+        {{#each user}}
+        <li>
+            {{this}}
+        </li>
+        {{/each}}
+    </ul>
+</div>
