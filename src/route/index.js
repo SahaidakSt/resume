@@ -696,6 +696,24 @@ router.get('/bootstrap4', function (req, res) {
     layout: 'bootstrap',
   })
 })
+// ===========================================
+router.get('/bootstrap5', function (req, res) {
+  res.render('bootstreplesson5list', {
+    layout: 'bootstrap',
+    list: [
+      { name: 'First Button' },
+      { name: 'Secondary Button' },
+      { name: 'Error Button' },
+      { name: 'Submit Button' },
+    ],
+    user: {
+      name: 'Ivan',
+      role: 'Admin',
+      isConfirm: true,
+      age: 32,
+    },
+  })
+})
 // ================================================================
 
 router.get('/task21', function (req, res) {
@@ -1552,27 +1570,6 @@ router.get('/shophome', function (req, res) {
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
-
-// ================================================================
-
-router.get('/list', function (req, res) {
-  res.render('list', {
-    layout: 'basic',
-    list: [
-      { name: 'First Button' },
-      { name: 'Secondary Button' },
-      { name: 'Error Button' },
-      { name: 'Submit Button' },
-    ],
-    user: {
-      name: 'Ivan',
-      role: 'Admin',
-      isConfirm: true,
-      age: 32,
-    },
-  })
-})
-// ===========================================
 
 // router.get Створює нам один ентпоїнт
 
