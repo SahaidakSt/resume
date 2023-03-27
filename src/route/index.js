@@ -714,6 +714,13 @@ router.get('/bootstrap5', function (req, res) {
     },
   })
 })
+
+// ===========================================
+router.get('/bootstrap6', function (req, res) {
+  res.render('bootstreplesson6', {
+    layout: 'bootstrap',
+  })
+})
 // ================================================================
 
 router.get('/task21', function (req, res) {
