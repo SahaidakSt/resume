@@ -1,0 +1,12 @@
+<div class='row'>
+  {{#each contact}}
+    {{#if label}}
+      <div class='col-6'>
+        <label class='form-label'>{{label}}</label>
+        <div class='form-control'>{{placeholder}}</div>
+        <div class='form-text'><small
+          >{{caption}}</small></div>
+      </div>
+    {{/if}}
+  {{/each}}
+</div>
