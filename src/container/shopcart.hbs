@@ -1,0 +1,64 @@
+<main class='p-0'>
+  <div class='row mb-2'>
+    {{#with header}}
+      <div class='col-6'>
+        <h1>{{title}}</h1>
+      </div>
+      <div class='col-6 mt-2 text-end'>
+        <a
+          type='button'
+          href={{button.link}}
+          class='btn btn-outline-secondary'
+        >{{button.text}}</a>
+      </div>
+    {{/with}}
+  </div>
+  <hr />
+  {{#each goodsBlock}}
+    <div class='row mb-3'>
+      <div class='col-12'>
+        {{>cartGoodsItem}}
+      </div>
+    </div>
+  {{/each}}
+  <hr />
+  <section class='row mb-2'>
+    {{#with total}}
+      <div class='col-8'>
+        <h4>{{title}}</h4>
+        <h2>{{amount}}</h2>
+        <h6>{{delivery}}</h6>
+      </div>
+      <div class='col-4'>
+        {{#each buttons}}
+          <a
+            type='button'
+            href={{link}}
+            class='btn mb-2
+                    {{#if isSuccess}} btn-success{{/if}}
+                    {{#if isOutline}} btn-outline-success{{/if}}
+                  '
+          >
+            {{text}}
+          </a>
+        {{/each}}
+      </div>
+    {{/with}}
+  </section>
+  <hr />
+  <section>
+    {{#with goodsOtherBlock}}
+      <div class='row'>
+        <h2 class='text-center'>{{title}}</h2>
+        {{#each cards}}
+          <div class='col-4'>
+            {{>shopcard}}
+          </div>
+        {{/each}}
+      </div>
+    {{/with}}
+  </section>
+  <hr />
+  {{>shopsubscribe}}
+  <hr />
+</main>
