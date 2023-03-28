@@ -1,0 +1,41 @@
+<section class='card'>
+  <div class='row'>
+    <div class='col-2'>
+      <div class='p-2'>
+        <img src={{image}} alt={{name}} />
+      </div>
+    </div>
+    <div class='col-4'>
+      <div class='p-2'>
+        <h5>{{name}}</h5>
+        <p>{{description}}</p>
+      </div>
+    </div>
+    <div class='col-2'>
+      <div class='p-2 pt-3'>
+        <p>{{price.title}}</p>
+        <h5>{{price.value}}</h5>
+      </div>
+    </div>
+    <div class='col-2'>
+      <div class='p-2 pt-5 text-center'>
+        {{amount}}
+      </div>
+    </div>
+    <div class='col-2'>
+      <div class='pt-3'>
+        {{#each buttons}}
+          <button 
+            type='button' 
+            class='p-1 mb-3
+                   {{#if isPrimary}}btn btn-primary text-light{{/if}}
+                   {{#if isDanger}}btn btn-outline-danger{{/if}}
+                  '>
+            {{text}}
+          </button>
+          <br />
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</section>
