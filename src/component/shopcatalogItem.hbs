@@ -1,0 +1,50 @@
+<div class='card'>
+  <img src={{img}} alt={{name}} class='card-img-top' />
+  <div class='card-body'>
+    {{#if isHot}}
+      <span
+        class='badge rounded-pill bg-warning'
+      >HOT!</span>
+    {{/if}}
+    {{#if isNew}}
+      <span
+        class='badge rounded-pill bg-primary'
+      >Нове</span>
+    {{/if}}
+
+    {{#if isFast}}
+      <span class='badge bg-success mt-3'>Швидка доставка</span>
+    {{/if}}
+    {{#if isFree}}
+      <span class='badge bg-secondary mt-3'>Безкоштовна
+        доставка</span>
+    {{/if}}
+    <h6 class='my-3'>{{name}}</h6>
+    {{#with review}}
+      <div>{{amount}} {{text}}</div>
+    {{/with}}
+    <h3 class='my-3'>{{price}}</h3>
+    <p>{{delivery}}</p>
+    {{#each buttons}}
+      <a
+        href={{link}}
+        type='button'
+        class='
+              mb-2
+              btn {{#if isPrimary}} btn-primary{{/if}}
+              btn {{#if isSecondary}} btn-secondary{{/if}}
+              '
+      >
+        {{text}}
+      </a>
+    {{/each}}
+    <ul>
+      {{#each characteristics}}
+        <li>
+          {{title}}:
+          {{value}}
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+</div>
