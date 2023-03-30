@@ -723,6 +723,20 @@ router.get('/bootstrap6', function (req, res) {
 })
 // ================================================================
 
+router.get('/bootstrap7', function (req, res) {
+  res.render('bootstreplesson7', {
+    layout: 'bootstrap',
+  })
+})
+// ================================================================
+
+router.get('/css2', function (req, res) {
+  res.render('modul5css2', {
+    layout: 'modul5css',
+  })
+})
+// ================================================================
+
 router.get('/task21', function (req, res) {
   // res.render генерує нам HTML сторінку
 
