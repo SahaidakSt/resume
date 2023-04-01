@@ -39,7 +39,9 @@ router.get('/', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('index', {})
+  res.render('index', {
+    layout: 'index',
+  })
   //                  ↑↑ сюди вводимо JSON дані
 })
 
@@ -680,25 +682,25 @@ router.get('/bootstrap', function (req, res) {
 })
 // ===========================================
 router.get('/bootstrap2', function (req, res) {
-  res.render('bootstrapLeson2', {
+  res.render('bootstraplesson2', {
     layout: 'bootstrap',
   })
 })
 // ===========================================
 router.get('/bootstrap3', function (req, res) {
-  res.render('bootstrapLeson3', {
+  res.render('bootstraplesson3', {
     layout: 'bootstrap',
   })
 })
 // ===========================================
 router.get('/bootstrap4', function (req, res) {
-  res.render('bootstrapLeson4', {
+  res.render('bootstraplesson4', {
     layout: 'bootstrap',
   })
 })
 // ===========================================
 router.get('/bootstrap5', function (req, res) {
-  res.render('bootstreplesson5list', {
+  res.render('bootstraplesson5list', {
     layout: 'bootstrap',
     list: [
       { name: 'First Button' },
@@ -717,14 +719,14 @@ router.get('/bootstrap5', function (req, res) {
 
 // ===========================================
 router.get('/bootstrap6', function (req, res) {
-  res.render('bootstreplesson6', {
+  res.render('bootstraplesson6', {
     layout: 'bootstrap',
   })
 })
 // ================================================================
 
 router.get('/bootstrap7', function (req, res) {
-  res.render('bootstreplesson7', {
+  res.render('bootstraplesson7', {
     layout: 'bootstrap',
   })
 })
