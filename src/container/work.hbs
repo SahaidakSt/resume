@@ -1,104 +1,89 @@
-{{!
-Це код container файлу для summary сторінки,
-в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
-}}
-
-<div>
-    {{#with main}}
-    <main>
-        <section>
-            {{>title data="Work history" big=true}}
-            <div>
-                <ul>
-                    {{#each works}}
-                    <li>
-
-                        <div>{{position}}</div>
-
-                        <br>
-
-                        <div>
-                            {{duration.from}} -
-                            {{#if duration.to}} {{duration.to}}
-                            {{else}} (досі працюємо)
-                            {{/if}}
-                        </div>
-
-                        <br>
-
-                        <div>
-                            {{#if company.url}}
-                            {{>link text=company.name href=company.url blank=true noLine=true}}
-                            {{else}}
-                            <b>{{company.name}}</b>
-                            {{/if}}
-                        </div>
-
-                        <br>
-
-                        <div>
-                            <strong>Projects ({{projectAmount}})</strong>
-                        </div>
-
-                        <br>
-
-                        <ul>
-                            {{#each projects}}
-                            <li>
-                                <div>
-                                    {{>link text=name href=url blank=true noLine=true}}
-                                </div>
-
-                                <br>
-
-                                <div>
-                                    <p>{{about}}</p>
-                                </div>
-
-                                <br>
-
-                                <div><em>Project stacks ({{stackAmount}})</em></div>
-
-                                <br>
-
-                                <div>
-                                    {{#each stacks}}
-                                    {{name}}
-                                    <br>
-                                    {{/each}}
-                                </div>
-
-                                <br>
-
-                                <div><em>Project awards ({{awardAmount}})</em></div>
-
-                                <br>
-
-                                <div>
-                                    {{#each awards}}
-                                    {{name}}
-                                    <br>
-                                    {{/each}}
-                                </div>
-
-                                <br>
-                            </li>
-                            {{/each}}
-                        </ul>
-                    </li>
-                    <br>
-                    {{/each}}
-                </ul>
+<main>
+  <div class='row'>
+    <div class='col-12'>
+      {{#with main}}
+        <section class='pb-3'>
+          <h2 class='card-title pb-3'>Work history</h2>
+          <div class='card'>
+            <div class='card-body'>
+              {{#each works}}
+                <div class='mb-1'>{{position}}</div>
+                <div class='mb-1'>
+                  {{duration.from}}
+                  -
+                  {{#if duration.to}}
+                    {{duration.to}}
+                  {{else}}
+                    (досі працюємо)
+                  {{/if}}
+                </div>
+                <div class='mb-1'>
+                  {{#if company.url}}
+                    1111
+                    {{>link text=company.name href=company.url blank=true noLine=true}}
+                  {{else}}
+                    <b>{{company.name}}</b>
+                  {{/if}}
+                </div>
+                <div class='mb-3'>
+                  <strong>
+                    Projects
+                    <span
+                      class='badge text-bg-secondary rounded-pill'
+                    >
+                      {{projectAmount}}
+                    </span>
+                  </strong>
+                </div>
+                {{#each projects}}
+                  <div class='card'>
+                    <div class='card-body'>
+                      <div class='mb-2'>
+                        {{>link text=name href=url blank=true noLine=true}}
+                      </div>
+                      <div
+                        class='card-title'
+                      >
+                        {{about}}
+                      </div>
+                      <div>
+                        Project stacks
+                        <span
+                          class='badge text-bg-secondary rounded-pill'
+                        >
+                          {{stackAmount}}
+                        </span>
+                      </div>
+                      <div>
+                        {{#each stacks}}
+                          <div class='mx-3 my-1'>
+                            {{name}}
+                          </div>
+                        {{/each}}
+                      </div>
+                      <div>
+                        Project awards
+                        <span
+                          class='badge text-bg-secondary rounded-pill'
+                        >
+                          {{awardAmount}}
+                        </span>
+                      </div>
+                      <div>
+                        {{#each awards}}
+                          <div class='mx-3 my-1'>
+                            {{name}}
+                          </div>
+                        {{/each}}
+                      </div>
+                    </div>
+                  </div>
+                {{/each}}
+              {{/each}}
             </div>
+          </div>
         </section>
-
-
-    </main>
-    {{/with}}
-
-</div>
-
-{{!--
-Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
-Адже наш layout/default.hbs має вже структуру HTML
---}}
+      {{/with}}
+    </div>
+  </div>
+</main>

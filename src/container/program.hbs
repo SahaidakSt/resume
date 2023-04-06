@@ -1,66 +1,85 @@
-<div>
-  {{#with program}}
-    {{#with excursion}}
-      <h1>{{name}}</h1>
-      {{#with location}}
-        <div><address>{{city}}, {{country}}</address></div>
-      {{/with}}
-      <div>{{date}}</div>
-      <div>
-        <ul>
-          {{#each program}}
-            <li>
-              <div><h2>{{name}}</h2></div>
-              <div><h3>{{type}} ({{duration}})</h3></div>
-              {{#with details}}
+<main class="p-5">
+  <div class='row'>
+    <div class='col-12'>
+      {{#with program}}
+      {{#with excursion}}
+      <div class='card '>
+        <div class='card-body '>
+          <h1 class='card-title'>{{name}}</h1>
+          {{#with location}}
+          <div>
+            <address>{{city}}, {{country}}</address>
+          </div>
+          {{/with}}
+          <div>{{date}}</div>
+          <div>
+            {{#each program}}
+            <div class='card m-3'>
+              <div class='card-body'>
+                <h2 class='card-title'>{{name}}</h2>
+                <div>
+                  <h3>
+                    {{type}}
+                    {{!-- ({{duration}}) --}}
+                    <span class='badge text-bg-warning rounded-pill'>
+                      {{duration}}
+                    </span>
+                  </h3>
+                </div>
+                {{#with details}}
                 {{#with museum}}
-                  <div><strong>{{name}}</strong></div>
-                  {{#with location}}
-                    <address>
-                      <div>
-                        {{address}},{{city}},{{country}}
-                      </div>
-                    </address>
-                  {{/with}}
-                  <br />
-                  {{#each exhibits}}
-                    <div><b>{{name}}</b></div>
-                    <div>{{artist}}</div>
-                    <div>{{description}}</div>
-                    <div>
-                      {{#if audio_guide}}
-                        <small>(with audio guide)</small>
-                      {{/if}}
-                    </div>
-                    <br />
-                  {{/each}}
+                <div><strong>{{name}}</strong></div>
+                {{#with location}}
+                <address>
+                  <div>
+                    {{address}},{{city}},{{country}}
+                  </div>
+                </address>
+                {{/with}}
+                <br />
+                {{#each exhibits}}
+                <div><b>{{name}}</b></div>
+                <div>{{artist}}</div>
+                <div>{{description}}</div>
+                <div>
+                  {{#if audio_guide}}
+                  <small>(with audio guide)</small>
+                  {{/if}}
+                </div>
+                <br />
+                {{/each}}
                 {{/with}}
                 {{#with venue}}
-                  <div><strong>{{name}}</strong></div>
-                  {{#with location}}
-                    <address>
-                      <div>
-                        {{address}},{{city}},{{country}}
-                      </div>
-                    </address>
-                  {{/with}}
+                <div><strong>{{name}}</strong></div>
+                {{#with location}}
+                <address>
+                  <div>
+                    {{address}},{{city}},{{country}}
+                  </div>
+                </address>
+                {{/with}}
                 {{/with}}
                 <br />
                 {{#each performers}}
-                  <div><strong>{{name}}</strong></div>
-                  <div>{{type}}</div>
-                  <br />
+                <div><strong>{{name}}</strong></div>
+                <div>{{type}}</div>
+                <br />
                 {{/each}}
                 {{#with guide}}
-                  <div><i>{{name}}</i></div>
-                  <div><i>{{language}}</i></div>
-                  <div><i>{{rating}}</i></div>
+                <div><i>{{name}}</i></div>
+                <div><i>{{language}}</i></div>
+                <div><i>{{rating}}</i></div>
                 {{/with}}
-              {{/with}}
-            </li>
-          {{/each}}
-        </ul>
+                {{/with}}
+              </div>
+            </div>
+            {{/each}}
+            </ul>
+          </div>
+        </div>
       </div>
-    {{/with}}
-  {{/with}}
-</div>
+      {{/with}}
+      {{/with}}
+    </div>
+  </div>
+</main>

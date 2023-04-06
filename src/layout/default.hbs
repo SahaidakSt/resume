@@ -1,7 +1,3 @@
-{{!--
-Це леяут по замовчюванню, котрий вже містить базову структуру HTML документа
-І котрий обгортає код container файлів для будь-яких ендпоїнтів
---}}
 <!DOCTYPE html>
 <html>
 
@@ -34,17 +30,13 @@
             <address>{{address}}</address>
         </div>
 
-        <hr class="my-5" />
+        {{!-- <hr class="my-5" /> --}}
     </header>
     {{/with}}
     <div class="mb-5">
         {{>nav}}
     </div>
-
-
-    {{! ↓ ця кострукція показує куди шаблонізатору треба вставляти код з container файлу --}}
     {{{body}}}
-
     {{>footer
     social=footer.social
     firstname=header.name.firstname

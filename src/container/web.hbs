@@ -1,46 +1,44 @@
-<div>
-  {{#with web}}
-    <ul>
-      {{#each languages}}
-        <li>
-          <div><h2>{{name}}</h2></div>
-          <div>{{version}}</div>
-          <div><blockquote
-            >{{description}}</blockquote></div>
-          <br />
-          {{#each elements}}
-            <div><strong>{{name}}</strong></div>
-            <div><q>{{description}}</q></div>
-            {{#each attributes}}
-              <br />
-              <div><em>{{name}}</em></div>
-              <div><q>{{description}}</q></div>
-            {{/each}}
-            <br />
-          {{/each}}
-          {{#each properties}}
-            <div><strong>{{name}}</strong></div>
-            <div><q>{{description}}</q></div>
-            {{#each values}}
-              <br />
-              <div><em>{{value}}</em></div>
-              <div><q>{{description}}</q></div>
-            {{/each}}
-            <br />
-          {{/each}}
-          {{#each functions}}
-            <div><strong>{{name}}</strong></div>
-            <div><q>{{description}}</q></div>
-            {{#each parameters}}
-              <br />
-              <div><em>{{name}}</em></div>
-              <div>{{type}}</div>
-              <div><q>{{description}}</q></div>
-            {{/each}}
-            <br />
-          {{/each}}
-        </li>
-      {{/each}}
-    </ul>
-  {{/with}}
-</div>
+<main class='p-5'>
+  <div class='row'>
+    <div class='col-12'>
+      {{#with web}}
+        {{#each languages}}
+          <div class='card mb-5'>
+            <div class='card-body'>
+              <h2 class='card-title'>{{name}}</h2>
+              <div>{{version}}</div>
+              <div>
+                <blockquote>{{description}}</blockquote>
+              </div>
+              {{#each elements}}
+                <div><strong>{{name}}</strong></div>
+                <div><q>{{description}}</q></div>
+                {{#each attributes}}
+                  <div><em>{{name}}</em></div>
+                  <div><q>{{description}}</q></div>
+                {{/each}}
+              {{/each}}
+              {{#each properties}}
+                <div><strong>{{name}}</strong></div>
+                <div><q>{{description}}</q></div>
+                {{#each values}}
+                  <div><em>{{value}}</em></div>
+                  <div><q>{{description}}</q></div>
+                {{/each}}
+              {{/each}}
+              {{#each functions}}
+                <div><strong>{{name}}</strong></div>
+                <div><q>{{description}}</q></div>
+                {{#each parameters}}
+                  <div><em>{{name}}</em></div>
+                  <div>{{type}}</div>
+                  <div><q>{{description}}</q></div>
+                {{/each}}
+              {{/each}}
+            </div>
+          </div>
+        {{/each}}
+      {{/with}}
+    </div>
+  </div>
+</main>

@@ -1,45 +1,73 @@
-{{!
-Це код container файлу для summary сторінки,
-в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
-}}
-
-<div>
-    {{#with main}}
-    <main>
-        <section>
-            {{>title data="All skills" big=true}}
-            <ul>
-                {{#each skills}}
-                <li>
+<main>
+  {{#with main}}
+    <div class='row'>
+      <div class='col-12'>
+        <section class='pb-3'>
+          <div class='card'>
+            <div class='card-body'>
+              <h2 class='card-title pb-3'>Skills</h2>
+              {{#each skills}}
+                <div class='px-5 py-1'>
+                  <p>
                     {{name}}
-                    {{#if point includeZero=true}} ({{point}}) {{/if}}
-                    {{#if isTop}} (top!) {{/if}}
-                    {{#unless point includeZero=true}} (не вивчаємо) {{/unless}}
-                    {{#unless point}}
                     {{#if point includeZero=true}}
-                    (зараз вивчаємо)
+                      <span
+                        class='badge text-bg-success text-uppercase rounded-pill'
+                      >
+                        {{point}}
+                      </span>
                     {{/if}}
+                    {{#if isTop}}
+                      <span
+                        class='badge text-bg-warning text-uppercase rounded-pill'
+                      >
+                        top!
+                      </span>
+                    {{/if}}
+                    {{#unless point includeZero=true}}
+                      <span
+                        class='badge text-bg-secondary rounded-pill'
+                      >
+                        не вивчаємо
+                      </span>
                     {{/unless}}
-                </li>
-                {{/each}}
-            </ul>
+                    {{#unless point}}
+                      {{#if point includeZero=true}}
+                        <span
+                          class='badge text-bg-primary rounded-pill'
+                        >
+                          зараз вивчаємо
+                        </span>
+                      {{/if}}
+                    {{/unless}}
+                  </p>
+                </div>
+              {{/each}}
+            </div>
+          </div>
         </section>
-        <section>
-            {{>title data="My hobbies" big=false}}
-            <ol>
-                {{#each hobbies}}
-                <li>
+        <section class='pb-3'>
+          <div class='card'>
+            <div class='card-body'>
+              <h3 class='card-title pb-3'>Hobbies</h3>
+              {{#each hobbies}}
+                <div class='px-5 py-1'>
+                  <p>
                     {{name}}
-                    {{#if isMain}} (favourite) {{/if}}
-                </li>
-                {{/each}}
-            </ol>
+                    {{#if isMain}}
+                      <span
+                        class='badge text-bg-warning rounded-pill'
+                      >
+                        favourite
+                      </span>
+                    {{/if}}
+                  </p>
+                </div>
+              {{/each}}
+            </div>
+          </div>
         </section>
-    </main>
-    {{/with}}
-</div>
-
-{{!--
-Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
-Адже наш layout/default.hbs має вже структуру HTML
---}}
+      </div>
+    </div>
+  {{/with}}
+</main>

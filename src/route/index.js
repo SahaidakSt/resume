@@ -52,6 +52,7 @@ router.get('/summary', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('summary', {
     // ↙ сюди вводимо JSON дані
+    layout: 'default',
 
     page: {
       title: 'Resume | Summary',
@@ -86,6 +87,7 @@ router.get('/skills', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('skills', {
     // ↙ сюди вводимо JSON дані
+    layout: 'default',
 
     page: {
       title: 'Resume | Skills',
@@ -148,6 +150,7 @@ router.get('/education', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('education', {
     // ↙ сюди вводимо JSON дані
+    layout: 'default',
 
     page: {
       title: 'Resume | Education',
@@ -279,8 +282,7 @@ router.get('/person', function (req, res) {
         {
           degree: 'Bachelor of Science',
           major: 'Computer Science',
-          university:
-            'Massachusetts Institute of Technology',
+          university: 'Massachusetts Institute of Technology',
           graduationYear: 2012,
         },
       ],
@@ -290,10 +292,7 @@ router.get('/person', function (req, res) {
           title: 'Software Engineer',
           startDate: '2012-06-01',
           endDate: '2016-12-31',
-          responsibilities: [
-            'Developed new features for Google Maps',
-            'Worked on improving search algorithms',
-          ],
+          responsibilities: ['Developed new features for Google Maps', 'Worked on improving search algorithms'],
           year_founded: 1990,
           industry: 'Technology',
           employees: [
@@ -304,8 +303,7 @@ router.get('/person', function (req, res) {
               projects: [
                 {
                   name: 'Project Alpha',
-                  description:
-                    'Developing new software platform',
+                  description: 'Developing new software platform',
                   status: 'In Progress',
                   teams: [
                     {
@@ -319,23 +317,17 @@ router.get('/person', function (req, res) {
                         {
                           name: 'Alice Johnson',
                           title: 'Software Engineer',
-                          email:
-                            'alice.johnson@example.com',
+                          email: 'alice.johnson@example.com',
                           skills: ['Java', 'Python', 'SQL'],
                           projects: [
                             {
                               name: 'Project A',
-                              description:
-                                'Lorem ipsum dolor sit amet',
-                              technologies: [
-                                'Java',
-                                'Spring Framework',
-                              ],
+                              description: 'Lorem ipsum dolor sit amet',
+                              technologies: ['Java', 'Spring Framework'],
                               team_members: [
                                 {
                                   name: 'Bob Lee',
-                                  title:
-                                    'Software Engineer',
+                                  title: 'Software Engineer',
                                 },
                                 {
                                   name: 'Cindy Chen',
@@ -367,18 +359,12 @@ router.get('/bio', function (req, res) {
 
     name: 'Albert Einstein',
     birthdate: 'March 14, 1879',
-    birthplace:
-      'Ulm, Kingdom of Württemberg, German Empire',
+    birthplace: 'Ulm, Kingdom of Württemberg, German Empire',
     deathdate: 'April 18, 1955',
     deathplace: 'Princeton, New Jersey, United States',
     nationality: 'Swiss, German, American',
     occupation: 'Theoretical Physicist',
-    known_for: [
-      'Theory of Relativity',
-      'E=mc²',
-      'Photoelectric Effect',
-      'Brownian Motion',
-    ],
+    known_for: ['Theory of Relativity', 'E=mc²', 'Photoelectric Effect', 'Brownian Motion'],
     education: [
       {
         degree: 'Doctor of Philosophy',
@@ -394,8 +380,7 @@ router.get('/bio', function (req, res) {
         publisher: 'Annalen der Physik',
       },
       {
-        title:
-          'Does the Inertia of a Body Depend Upon Its Energy Content?',
+        title: 'Does the Inertia of a Body Depend Upon Its Energy Content?',
         year: 1905,
         publisher: 'Annalen der Physik',
       },
@@ -408,8 +393,7 @@ router.get('/bio', function (req, res) {
       },
       {
         name: 'Elsa Einstein',
-        relationship:
-          "Second wife, also Einstein's first cousin",
+        relationship: "Second wife, also Einstein's first cousin",
         years: '1919-1936',
       },
     ],
@@ -417,21 +401,11 @@ router.get('/bio', function (req, res) {
       {
         title: 'Nobel Prize in Physics',
         year: 1921,
-        description:
-          'Awarded for his explanation of the photoelectric effect',
+        description: 'Awarded for his explanation of the photoelectric effect',
       },
     ],
-    influences: [
-      'Isaac Newton',
-      'James Clerk Maxwell',
-      'Hermann Minkowski',
-    ],
-    influenced: [
-      'Niels Bohr',
-      'Erwin Schrödinger',
-      'Werner Heisenberg',
-      'Richard Feynman',
-    ],
+    influences: ['Isaac Newton', 'James Clerk Maxwell', 'Hermann Minkowski'],
+    influenced: ['Niels Bohr', 'Erwin Schrödinger', 'Werner Heisenberg', 'Richard Feynman'],
     quotes: [
       'Imagination is more important than knowledge.',
       'I have no special talent. I am only passionately curious.',
@@ -493,8 +467,7 @@ router.get('/program', function (req, res) {
                   {
                     name: 'Winged Victory of Samothrace',
                     artist: null,
-                    description:
-                      'Ancient Greek statue of Nike, the goddess of victory',
+                    description: 'Ancient Greek statue of Nike, the goddess of victory',
                     audio_guide: true,
                   },
                 ],
@@ -558,35 +531,29 @@ router.get('/web', function (req, res) {
           elements: [
             {
               name: 'div',
-              description:
-                'Defines a division or a section in an HTML document.',
+              description: 'Defines a division or a section in an HTML document.',
               attributes: [
                 {
                   name: 'id',
-                  description:
-                    'Specifies a unique id for an HTML element.',
+                  description: 'Specifies a unique id for an HTML element.',
                 },
                 {
                   name: 'class',
-                  description:
-                    'Specifies one or more class names for an HTML element.',
+                  description: 'Specifies one or more class names for an HTML element.',
                 },
               ],
             },
             {
               name: 'p',
-              description:
-                'Defines a paragraph in an HTML document.',
+              description: 'Defines a paragraph in an HTML document.',
               attributes: [
                 {
                   name: 'id',
-                  description:
-                    'Specifies a unique id for an HTML element.',
+                  description: 'Specifies a unique id for an HTML element.',
                 },
                 {
                   name: 'class',
-                  description:
-                    'Specifies one or more class names for an HTML element.',
+                  description: 'Specifies one or more class names for an HTML element.',
                 },
               ],
             },
@@ -604,30 +571,25 @@ router.get('/web', function (req, res) {
               values: [
                 {
                   value: 'red',
-                  description:
-                    'Sets the text color to red.',
+                  description: 'Sets the text color to red.',
                 },
                 {
                   value: 'blue',
-                  description:
-                    'Sets the text color to blue.',
+                  description: 'Sets the text color to blue.',
                 },
               ],
             },
             {
               name: 'background-color',
-              description:
-                'Sets the background color of an element.',
+              description: 'Sets the background color of an element.',
               values: [
                 {
                   value: 'white',
-                  description:
-                    'Sets the background color to white.',
+                  description: 'Sets the background color to white.',
                 },
                 {
                   value: 'black',
-                  description:
-                    'Sets the background color to black.',
+                  description: 'Sets the background color to black.',
                 },
               ],
             },
@@ -636,32 +598,27 @@ router.get('/web', function (req, res) {
         {
           name: 'JavaScript',
           version: 'ES6',
-          description:
-            'JavaScript is a programming language used to create interactive effects within web browsers.',
+          description: 'JavaScript is a programming language used to create interactive effects within web browsers.',
           functions: [
             {
               name: 'alert()',
-              description:
-                'Displays an alert box with a specified message and an OK button.',
+              description: 'Displays an alert box with a specified message and an OK button.',
               parameters: [
                 {
                   name: 'message',
                   type: 'string',
-                  description:
-                    'The message to display in the alert box.',
+                  description: 'The message to display in the alert box.',
                 },
               ],
             },
             {
               name: 'getElementById()',
-              description:
-                'Returns the element with the specified ID.',
+              description: 'Returns the element with the specified ID.',
               parameters: [
                 {
                   name: 'id',
                   type: 'string',
-                  description:
-                    'The ID of the element to find.',
+                  description: 'The ID of the element to find.',
                 },
               ],
             },
@@ -702,12 +659,7 @@ router.get('/bootstrap4', function (req, res) {
 router.get('/bootstrap5', function (req, res) {
   res.render('bootstraplesson5list', {
     layout: 'bootstrap',
-    list: [
-      { name: 'First Button' },
-      { name: 'Secondary Button' },
-      { name: 'Error Button' },
-      { name: 'Submit Button' },
-    ],
+    list: [{ name: 'First Button' }, { name: 'Secondary Button' }, { name: 'Error Button' }, { name: 'Submit Button' }],
     user: {
       name: 'Ivan',
       role: 'Admin',
@@ -737,6 +689,243 @@ router.get('/css2', function (req, res) {
     layout: 'modul5css',
   })
 })
+// ================================================================
+
+router.get('/mac', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('mac', {
+    name: 'Apple MacBook Pro',
+    description: 'The ultimate notebook for power users',
+    price: 1999.99,
+    category: 'Computers & Tablets',
+    features: {
+      processor: {
+        brand: 'Intel',
+        model: 'Core i9',
+        speed: '2.3 GHz',
+        cores: 8,
+        cache: '16 MB',
+      },
+      memory: {
+        type: 'DDR4',
+        size: '32 GB',
+        speed: '2666 MHz',
+      },
+      storage: {
+        type: 'SSD',
+        size: '1 TB',
+      },
+      display: {
+        size: '16 inches',
+        resolution: '3072x1920',
+        technology: 'Retina',
+        color_space: 'P3',
+        brightness: '500 nits',
+        refresh_rate: '60 Hz',
+      },
+      graphics: {
+        brand: 'AMD',
+        model: 'Radeon Pro 5500M',
+        memory: '4 GB GDDR6',
+      },
+      ports: [
+        {
+          type: 'Thunderbolt 3',
+          count: 4,
+          features: ['Charging', 'DisplayPort', 'Thunderbolt (up to 40 Gbps)', 'USB 3.1 Gen 2 (up to 10 Gbps)'],
+        },
+        {
+          type: 'HDMI',
+          count: 1,
+        },
+      ],
+      battery: {
+        type: 'Lithium Polymer',
+        capacity: '100 Wh',
+        life: 'Up to 11 hours',
+      },
+      weight: '4.3 pounds',
+      dimensions: {
+        height: '0.64 inch',
+        width: '14.09 inches',
+        depth: '9.68 inches',
+      },
+      operating_system: 'macOS',
+      accessories: [
+        {
+          name: 'Apple Magic Keyboard',
+          price: 99.99,
+        },
+        {
+          name: 'Apple Magic Mouse 2',
+          price: 79.99,
+        },
+        {
+          name: 'USB-C to USB Adapter',
+          price: 19.99,
+        },
+      ],
+    },
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})
+
+// ================================================================
+
+router.get('/facebook', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('facebook', {
+    name: 'Facebook',
+    users: [
+      {
+        id: 1,
+        name: 'John Doe',
+        gender: 'Male',
+        age: 30,
+        friends: [
+          {
+            id: 2,
+            name: 'Jane Smith',
+            gender: 'Female',
+            age: 27,
+            mutual_friends: [
+              {
+                id: 4,
+                name: 'Samantha Lee',
+                gender: 'Female',
+                age: 25,
+              },
+            ],
+          },
+          {
+            id: 5,
+            name: 'Mike Williams',
+            gender: 'Male',
+            age: 28,
+            mutual_friends: [
+              {
+                id: 7,
+                name: 'David Kim',
+                gender: 'Male',
+                age: 29,
+              },
+            ],
+          },
+        ],
+        groups: [
+          {
+            id: 1,
+            name: 'Hiking Enthusiasts',
+            description: 'A group for people who love hiking and the great outdoors',
+            members: [
+              {
+                id: 8,
+                name: 'Sarah Johnson',
+                gender: 'Female',
+                age: 25,
+              },
+            ],
+          },
+          {
+            id: 2,
+            name: 'Foodies United',
+            description: 'A group for food lovers to share recipes and restaurant recommendations',
+            members: [
+              {
+                id: 5,
+                name: 'Mike Williams',
+                gender: 'Male',
+                age: 28,
+              },
+              {
+                id: 8,
+                name: 'Sarah Johnson',
+                gender: 'Female',
+                age: 25,
+              },
+            ],
+          },
+        ],
+      },
+      {
+        id: 16,
+        name: 'Amy Lee',
+        gender: 'Female',
+        age: 30,
+        friends: [
+          {
+            id: 15,
+            name: 'Peter Kim',
+            gender: 'Male',
+            age: 32,
+            mutual_friends: [
+              {
+                id: 17,
+                name: 'David Chen',
+                gender: 'Male',
+                age: 33,
+              },
+              {
+                id: 19,
+                name: 'Erica Wong',
+                gender: 'Female',
+                age: 29,
+                mutual_friends: [
+                  {
+                    id: 20,
+                    name: 'Alex Lee',
+                    gender: 'Male',
+                    age: 31,
+                  },
+                ],
+              },
+            ],
+            groups: [
+              {
+                id: 3,
+                name: 'Travel Addicts',
+                description: 'A group for people who love to travel and explore new places',
+                members: [
+                  {
+                    id: 22,
+                    name: 'Jackie Chen',
+                    gender: 'Female',
+                    age: 26,
+                  },
+                ],
+              },
+              {
+                id: 4,
+                name: 'Pet Lovers',
+                description: 'A group for people who love their furry friends',
+                members: [
+                  {
+                    id: 16,
+                    name: 'Amy Lee',
+                    gender: 'Female',
+                    age: 30,
+                  },
+                  {
+                    id: 25,
+                    name: 'John Smith',
+                    gender: 'Male',
+                    age: 33,
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})
+
 // ================================================================
 
 router.get('/task21', function (req, res) {
@@ -833,23 +1022,19 @@ router.get('/task22', function (req, res) {
         efficiency: {
           title: 'Efficiency',
           sub_title: 'Streamline your software development',
-          description:
-            'Streamline your software development with our innovative platform...',
+          description: 'Streamline your software development with our innovative platform...',
           button: 'Show more',
         },
         innovation: {
           title: 'Innovation',
-          sub_title:
-            'Forward-thinking approach to programming',
-          description:
-            ' Stay ahead of the curve with our forward-thinking approach to programming...',
+          sub_title: 'Forward-thinking approach to programming',
+          description: ' Stay ahead of the curve with our forward-thinking approach to programming...',
           button: 'Show more',
         },
         collaboration: {
           title: 'Collaboration',
           sub_title: 'Connect with like-minded developers',
-          description:
-            'Connect with a community of like-minded developers to share knowledge and insights...',
+          description: 'Connect with a community of like-minded developers to share knowledge and insights...',
           button: 'Show more',
         },
       },
@@ -870,28 +1055,19 @@ router.get('/task22', function (req, res) {
 
 // ================================================================
 
-router.get('/task11', function (req, res) {
+router.get('/js', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('task11', {
+  res.render('js', {
     layout: 'basic',
     name: 'JavaScript',
-    description:
-      'JavaScript is a popular high-level, dynamic, and interpreted programming language.',
+    description: 'JavaScript is a popular high-level, dynamic, and interpreted programming language.',
     history: {
       year: 1995,
       founder: 'Brendan Eich',
     },
-    types: [
-      'Number',
-      'String',
-      'Boolean',
-      'Null',
-      'Undefined',
-      'Symbol',
-      'Object',
-    ],
+    types: ['Number', 'String', 'Boolean', 'Null', 'Undefined', 'Symbol', 'Object'],
     syntax: {
       variables: ['var', 'let', 'const'],
       functions: ['function'],
@@ -907,26 +1083,8 @@ router.get('/task11', function (req, res) {
       'Asynchronous programming with Promises and async/await',
       'Modules with import/export statements',
     ],
-    libraries: [
-      'jQuery',
-      'React',
-      'Angular',
-      'Vue',
-      'Node.js',
-      'Express.js',
-      'Lodash',
-      'Moment.js',
-    ],
-    tools: [
-      'Babel',
-      'Webpack',
-      'ESLint',
-      'Jest',
-      'Mocha',
-      'Chai',
-      'Selenium',
-      'Cypress',
-    ],
+    libraries: ['jQuery', 'React', 'Angular', 'Vue', 'Node.js', 'Express.js', 'Lodash', 'Moment.js'],
+    tools: ['Babel', 'Webpack', 'ESLint', 'Jest', 'Mocha', 'Chai', 'Selenium', 'Cypress'],
     community: [
       {
         name: 'Stack Overflow',
@@ -1074,11 +1232,7 @@ router.get('/task31', function (req, res) {
       cards: [
         {
           name: 'The Mona Lisa',
-          items: [
-            'Painting',
-            'Oil on poplar panel',
-            '1503-1519',
-          ],
+          items: ['Painting', 'Oil on poplar panel', '1503-1519'],
         },
         {
           name: 'The Persistence of Memory',
@@ -1124,16 +1278,14 @@ router.get('/task31', function (req, res) {
         {
           header: 'Cooking',
           title: 'The Joy of Cooking',
-          description:
-            'Cooking is a creative outlet that can bring people together over delicious food.',
+          description: 'Cooking is a creative outlet that can bring people together over delicious food.',
           button: 'Learn More',
           footer: 'Photo by Brooke Lark on Unsplash',
         },
         {
           header: 'Travel',
           title: 'The Benefits of Traveling',
-          description:
-            'Traveling broadens your perspective, provides new experiences, and creates lasting memories.',
+          description: 'Traveling broadens your perspective, provides new experiences, and creates lasting memories.',
           button: 'Explore',
           footer: 'Photo by Sime Basioli on Unsplash',
         },
@@ -1145,14 +1297,12 @@ router.get('/task31', function (req, res) {
         {
           header: 'Our Approach',
           title: 'Innovative Solutions for Your Business',
-          description:
-            'We create effective solutions that cater to your business needs.',
+          description: 'We create effective solutions that cater to your business needs.',
         },
         {
           header: 'Our Expertise',
           title: 'Trusted and Experienced Professionals',
-          description:
-            'Our team of experts delivers tailored strategies for best results.',
+          description: 'Our team of experts delivers tailored strategies for best results.',
         },
       ],
     },
@@ -1211,7 +1361,7 @@ router.get('/task12', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('task12', {
+  res.render('car', {
     layout: 'basic',
     make: 'Toyota',
     model: 'Camry',
@@ -1349,8 +1499,7 @@ router.get('/shophome', function (req, res) {
           idNew: true,
         },
         {
-          title:
-            'New Study Shows Benefits of Meditation for Mental Health',
+          title: 'New Study Shows Benefits of Meditation for Mental Health',
           description:
             'A new study published in the Journal of the American Medical Association finds that practicing mindfulness meditation can lead to improved mental health outcomes for people struggling with depression and anxiety.',
           isTop: false,
@@ -1364,24 +1513,21 @@ router.get('/shophome', function (req, res) {
           idNew: true,
         },
         {
-          title:
-            'GameStop Shares Soar as Reddit Traders Rally',
+          title: 'GameStop Shares Soar as Reddit Traders Rally',
           description:
             'Shares of GameStop surge as amateur traders on the social media platform Reddit rally to drive up the price, in what some are calling a battle between Wall Street and Main Street.',
           isTop: false,
           idNew: false,
         },
         {
-          title:
-            'UK Announces Plan to Ban Sale of Gas-Powered Cars by 2030',
+          title: 'UK Announces Plan to Ban Sale of Gas-Powered Cars by 2030',
           description:
             'In an effort to combat climate change, the UK government announces a plan to ban the sale of new gas-powered cars and vans by 2030, with hybrid vehicles to follow in 2035.',
           isTop: true,
           idNew: false,
         },
         {
-          title:
-            'New Study Shows Link Between Exercise and Longevity',
+          title: 'New Study Shows Link Between Exercise and Longevity',
           description:
             'A new study published in the Journal of the American Medical Association suggests that regular exercise can help people live longer, with participants who exercised regularly having a lower risk of premature death.',
           isTop: false,
@@ -1473,8 +1619,7 @@ router.get('/shophome', function (req, res) {
     },
     subscribe: {
       header: 'Unlock Premium Content',
-      description:
-        'Subscribe to access exclusive content and features.',
+      description: 'Subscribe to access exclusive content and features.',
       buttons: [
         {
           text: 'Register Now',
@@ -1633,8 +1778,7 @@ router.get('/shopproduct', function (req, res) {
 
       info: {
         title: 'Product PC Asus 331 BC 671',
-        about:
-          "Some quick example text to build on the card title and make up the bulk of the card's content.",
+        about: "Some quick example text to build on the card title and make up the bulk of the card's content.",
         price: '1000$',
 
         category: [
@@ -1891,16 +2035,14 @@ router.get('/shopnews', function (req, res) {
           idNew: true,
         },
         {
-          title:
-            'GameStop Shares Soar as Reddit Traders Rally',
+          title: 'GameStop Shares Soar as Reddit Traders Rally',
           description:
             'Shares of GameStop surge as amateur traders on the social media platform Reddit rally to drive up the price, in what some are calling a battle between Wall Street and Main Street.',
           isTop: false,
           idNew: false,
         },
         {
-          title:
-            'New Study Shows Link Between Exercise and Longevity',
+          title: 'New Study Shows Link Between Exercise and Longevity',
           description:
             'A new study published in the Journal of the American Medical Association suggests that regular exercise can help people live longer, with participants who exercised regularly having a lower risk of premature death.',
           isTop: false,
@@ -2245,32 +2387,21 @@ router.get('/shoporder', function (req, res) {
       add: {
         friend: {
           label: 'Запросіть друзів та отримайте ще купонів',
-          placeholder:
-            'Введіть контактні дані друзів через ;',
-          caption:
-            'Напишіть електронні адреси/телефон друзів через “;”',
+          placeholder: 'Введіть контактні дані друзів через ;',
+          caption: 'Напишіть електронні адреси/телефон друзів через “;”',
         },
         colleague: {
           label: 'Запросити колег',
-          placeholder:
-            'Введіть контактні дані колег через ;',
-          caption:
-            'Напишіть електронні адреси/телефон колег через “;”',
+          placeholder: 'Введіть контактні дані колег через ;',
+          caption: 'Напишіть електронні адреси/телефон колег через “;”',
         },
       },
     },
     quiz: {
       title: 'Домоможи краще нам тебе зрозуміти',
       preference: {
-        title:
-          'Який тип обладнання ви зацікавлені в придбанні?',
-        options: [
-          'Смартфони',
-          'Ноутбуки',
-          'Планшети',
-          'ПК',
-          'Телевізори',
-        ],
+        title: 'Який тип обладнання ви зацікавлені в придбанні?',
+        options: ['Смартфони', 'Ноутбуки', 'Планшети', 'ПК', 'Телевізори'],
       },
       your_expirience: {
         label: 'Який у Вас досвід користування ПК',
@@ -2285,8 +2416,7 @@ router.get('/shoporder', function (req, res) {
         ],
       },
       factors: {
-        title:
-          'Які з наведених нижче факторів є для вас важливими при купівлі обладнання?',
+        title: 'Які з наведених нижче факторів є для вас важливими при купівлі обладнання?',
         options: [
           'Ціна',
           'Репутація бренду',
@@ -2437,8 +2567,7 @@ router.get('/shopcart', function (req, res) {
       {
         image: 'https://picsum.photos/110/110',
         name: 'Samsung Galaxy S21 Ultra ',
-        description:
-          'екран 6.8", процесор Exynos 2100/Snapdragon 888, 12 ГБ ОЗУ, камера 108 МП, акумулятор 5000 мАг',
+        description: 'екран 6.8", процесор Exynos 2100/Snapdragon 888, 12 ГБ ОЗУ, камера 108 МП, акумулятор 5000 мАг',
         price: { title: 'Ціна', value: '25 000 ₴' },
         amount: '1 шт.',
         buttons: [
@@ -2449,8 +2578,7 @@ router.get('/shopcart', function (req, res) {
       {
         image: 'https://picsum.photos/110/110',
         name: 'Ноутбук Dell XPS 13',
-        description:
-          'екран 13.3", процесор Intel Core i7-1165G7, 16 ГБ ОЗУ, SSD на 512 ГБ, вага 1.2 кг.',
+        description: 'екран 13.3", процесор Intel Core i7-1165G7, 16 ГБ ОЗУ, SSD на 512 ГБ, вага 1.2 кг.',
         price: { title: 'Ціна', value: '25 000 ₴' },
 
         amount: '1 шт.',
@@ -2462,8 +2590,7 @@ router.get('/shopcart', function (req, res) {
       {
         image: 'https://picsum.photos/110/110',
         name: 'Телевізор LG OLED CX',
-        description:
-          'екран 55", роздільна здатність 4K, Smart TV, HDR, звук Dolby Atmos, 4 HDMI порти, 3 USB порти.',
+        description: 'екран 55", роздільна здатність 4K, Smart TV, HDR, звук Dolby Atmos, 4 HDMI порти, 3 USB порти.',
         price: { title: 'Ціна', value: '25 000 ₴' },
 
         amount: '1 шт.',
@@ -2537,8 +2664,7 @@ router.get('/shopcart', function (req, res) {
 
     subscribe: {
       header: 'Unlock Premium Content',
-      description:
-        'Subscribe to access exclusive content and features.',
+      description: 'Subscribe to access exclusive content and features.',
       buttons: [
         {
           text: 'Register Now',
@@ -2713,11 +2839,7 @@ router.get('/shopprofile', function (req, res) {
           number: '№12587463 від 01.01.2023',
           status: 'Виконано',
           amount: { title: 'Сума', value: '25 000 ₴' },
-          images: [
-            'https://picsum.photos/110/100',
-            'https://picsum.photos/110/100',
-            'https://picsum.photos/110/100',
-          ],
+          images: ['https://picsum.photos/110/100', 'https://picsum.photos/110/100', 'https://picsum.photos/110/100'],
           button: {
             text: 'Детальніше',
             link: 'https://www.youtube.com/',
@@ -2728,10 +2850,7 @@ router.get('/shopprofile', function (req, res) {
           number: '№12587463 від 01.01.2023',
           status: 'Виконано',
           amount: { title: 'Сума', value: '25 000 ₴' },
-          images: [
-            'https://picsum.photos/110/100',
-            'https://picsum.photos/110/100',
-          ],
+          images: ['https://picsum.photos/110/100', 'https://picsum.photos/110/100'],
           button: {
             text: 'Детальніше',
             link: 'https://www.youtube.com/',
@@ -2975,11 +3094,7 @@ router.get('/shopreview', function (req, res) {
         value: '4.5/5',
       },
       actionBlock: {
-        tabs: [
-          { text: 'Про товар' },
-          { text: 'Характеристики' },
-          { text: 'Відгуки', isActive: true },
-        ],
+        tabs: [{ text: 'Про товар' }, { text: 'Характеристики' }, { text: 'Відгуки', isActive: true }],
         field: {
           placeholder: 'Залиште відгук про товар',
           button: {
@@ -2989,8 +3104,7 @@ router.get('/shopreview', function (req, res) {
         },
       },
       feedbackBlock: {
-        title:
-          'Хочете поділитись своєю думкою про наш магазин?',
+        title: 'Хочете поділитись своєю думкою про наш магазин?',
         buttons: [
           {
             text: 'Додати відгук',
@@ -3060,11 +3174,7 @@ router.get('/shopreview', function (req, res) {
             title: 'Недоліки',
             text: 'Перегрів, ємкість жосткого диску',
           },
-          images: [
-            'https://picsum.photos/110/100',
-            'https://picsum.photos/110/100',
-            'https://picsum.photos/110/100',
-          ],
+          images: ['https://picsum.photos/110/100', 'https://picsum.photos/110/100', 'https://picsum.photos/110/100'],
           coments: [
             {
               userName: 'Користувач',
@@ -3297,12 +3407,7 @@ router.get('/shopcatalog', function (req, res) {
         input: {
           placeholder: 'Пошук',
         },
-        options: [
-          { value: 'Acer' },
-          { value: 'Apple' },
-          { value: 'Asus' },
-          { value: 'Dell' },
-        ],
+        options: [{ value: 'Acer' }, { value: 'Apple' }, { value: 'Asus' }, { value: 'Dell' }],
       },
       price: {
         title: 'Ціна',
@@ -3332,13 +3437,7 @@ router.get('/shopcatalog', function (req, res) {
         },
         {
           title: 'Діагональ екрану',
-          options: [
-            { value: '13' },
-            { value: '14' },
-            { value: '15-16' },
-            { value: '17-18' },
-            { value: '9 - 12.5' },
-          ],
+          options: [{ value: '13' }, { value: '14' }, { value: '15-16' }, { value: '17-18' }, { value: '9 - 12.5' }],
         },
         {
           title: 'Оперативна пам’ять',
