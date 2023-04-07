@@ -1,0 +1,99 @@
+<main class='p-5'>
+  <h2 class='p-3'>
+    {{name}}
+    <span class='badge text-bg-secondary rounded-pill'>
+      $
+      {{price}}
+    </span>
+  </h2>
+  <p>{{description}}</p>
+  <button type='button' class='btn btn-outline-success'>{{category}}</button>
+  <div class='my-3'>
+    {{#with features}}
+      <div class='mb-1'>
+        {{#each processor}}
+          {{this}}
+          {{#unless @last}}, {{/unless}}
+        {{/each}}
+        processor
+      </div>
+      <div class='mb-1'>
+        {{#each memory}}
+          {{this}}
+          {{#unless @last}}, {{/unless}}
+        {{/each}}
+        memory
+      </div>
+      <div class='mb-1'>
+        {{#each storage}}
+          {{this}}
+          {{#unless @last}}, {{/unless}}
+        {{/each}}
+        storage
+      </div>
+      <div class='mb-1'>
+        {{#each display}}
+          {{this}}
+          {{#unless @last}}, {{/unless}}
+        {{/each}}
+        display
+      </div>
+      <div class='mb-1'>
+        {{#each ports}}
+          {{type}}
+          <span class='badge text-bg-warning rounded-pill'>
+            {{count}}
+          </span>
+          ports
+          <ul>
+            {{#each features}}
+              <li>
+                <div>{{this}}</div>
+              </li>
+            {{/each}}
+          </ul>
+        {{/each}}
+      </div>
+      <div class='mb-1'>
+        {{#each battery}}
+          {{this}}
+          {{#unless @last}}, {{/unless}}
+        {{/each}}
+        battery
+      </div>
+      <div class='mb-1'>
+        weight
+        {{weight}}
+      </div>
+      <div class='mb-1'>
+        dimensions
+        {{#each dimensions}}
+          {{this}}
+          {{#unless @last}}x{{/unless}}
+        {{/each}}
+      </div>
+      <div class='mb-1'>
+
+        {{operating_system}}
+        operating system
+      </div>
+      <div class='mb-1'>
+
+        <div class='form-lable'>accessories</div>
+        {{#each accessories}}
+          <div class='form-check'>
+            <label class='form-check-lable'>
+              {{this.name}}
+              <span class='badge text-bg-secondary rounded-pill'>
+                + $
+                {{price}}
+              </span>
+            </label>
+            <input name='name_filterList' type='checkbox' class='form-check-input' />
+          </div>
+        {{/each}}
+
+      </div>
+    {{/with}}
+  </div>
+</main>

@@ -1,0 +1,218 @@
+<main class='p-5'>
+  <div class='row g-5'>
+    <div class='col-12 p-3'>
+
+      <h1 class='card-title m-3'>{{make}}</h1>
+      <h2 class='ms-3'>{{model}}, {{year}}</h2>
+      <section class='col-12 p-3'>
+        {{#with features}}
+          <div class='p-3'>
+            <h3 class='text-center'> Features </h3>
+          </div>
+          <div class='row'>
+            <h4 class='m-3'>Interior</h4>
+            {{#with interior}}
+
+              <div class='col-4'>
+                <div class='card'>
+                  <div class='card-header'>
+                    <div>Seats</div>
+                  </div>
+                  <ul class='list-group'>
+                    {{#each seats}}
+                      <li class='list-group-item'> {{@key}}: {{this}} </li>
+                    {{/each}}
+                  </ul>
+                </div>
+              </div>
+
+              <div class='col-4'>
+                <div class='card'>
+                  <div class='card-header'>
+                    <div>dashboard</div>
+                  </div>
+                  {{#with dashboard}}
+                    <ul class='list-group'>
+                      <li class='list-group-item'> material: {{material}} </li>
+                      <li class='list-group-item'> color: {{color}} </li>
+                      <li class='list-group-item'>
+                        {{#each display}}
+                          {{@key}}:
+                          {{this}}
+                          <br />
+                        {{/each}}
+                      </li>
+                    </ul>
+                  {{/with}}
+                </div>
+              </div>
+
+              <div class='col-4'>
+                <div class='card'>
+                  <div class='card-header'>
+                    <div>audio</div>
+                  </div>
+                  <ul class='list-group'>
+                    {{#each audio}}
+                      <li class='list-group-item'> {{@key}}: {{this}} </li>
+                    {{/each}}
+                  </ul>
+                </div>
+              </div>
+            {{/with}}
+          </div>
+
+          <div class='row'>
+            <h4 class='m-3'>exterior</h4>
+            {{#with exterior}}
+              <div class='col-4'>
+                <div class='card'>
+                  <div class='card-header'>
+                    <div>wheels</div>
+                  </div>
+                  <ul class='list-group'>
+                    {{#each wheels}}
+                      <li class='list-group-item'> {{@key}}: {{this}} </li>
+                    {{/each}}
+                  </ul>
+                </div>
+              </div>
+
+              <div class='col-4'>
+                <div class='card'>
+                  <div class='card-header'>
+                    <div>headlights</div>
+                  </div>
+                  <ul class='list-group'>
+                    {{#each headlights}}
+                      <li class='list-group-item'> {{@key}}: {{this}} </li>
+                    {{/each}}
+                  </ul>
+                </div>
+              </div>
+
+              <div class='col-4'>
+                <div class='card'>
+                  <div class='card-header'>
+                    <div>sunroof</div>
+                  </div>
+                  <ul class='list-group'>
+                    {{#each sunroof}}
+                      <li class='list-group-item'> {{@key}}: {{this}} </li>
+                    {{/each}}
+                  </ul>
+                </div>
+              </div>
+            {{/with}}
+          </div>
+
+          <div class='row'>
+            <h4 class='m-3'>safety</h4>
+            {{#with safety}}
+              <div class='col-4'>
+                <div class='card'>
+                  <div class='card-header'>
+                    <div>airbags</div>
+                  </div>
+                  <ul class='list-group'>
+                    {{#each airbags}}
+                      <li class='list-group-item'> {{@key}}: {{this}} </li>
+                    {{/each}}
+                  </ul>
+                </div>
+              </div>
+
+              <div class='col-4'>
+                <div class='card'>
+                  <div class='card-header'>
+                    <div>assistance</div>
+                  </div>
+                  <ul class='list-group'>
+                    {{#each assistance}}
+                      <li class='list-group-item'> {{@key}}: {{this}} </li>
+                    {{/each}}
+                  </ul>
+                </div>
+              </div>
+            {{/with}}
+          </div>
+        {{/with}}
+      </section>
+
+      <div class='p-3'>
+        <h4 class='m-3'>engine</h4>
+        <div class='row'>
+          <div class='col-6'>
+            <div class='card'>
+              <div class='card-header'>
+                <div>engine</div>
+              </div>
+              <ul class='list-group'>
+                {{#each engine}}
+                  <li class='list-group-item'>
+                    {{#unless this.type}}
+                      {{@key}}:
+                      {{this}}
+                    {{else}}
+                      {{@key}}:
+                      {{this.type}}
+                      <span class='badge text-bg-warning rounded-pill'>
+                        {{this.gears}}
+                      </span>
+                    {{/unless}}
+                  </li>
+                {{/each}}
+              </ul>
+            </div>
+          </div>
+
+          <div class='col-6'>
+            <div class='card'>
+              <div class='card-header'>
+                <div>fuel_economy</div>
+              </div>
+              <ul class='list-group'>
+                {{#each fuel_economy}}
+                  <li class='list-group-item'>
+                    {{@key}}
+                    <span class='badge text-bg-warning rounded-pill'>
+                      {{this}}
+                    </span>
+                  </li>
+                {{/each}}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class='row p-3'>
+        <h4 class='m-3'>price</h4>
+        <div class='col-6'>
+          <div class='card'>
+            <div class='card-header'>
+              <div>price</div>
+            </div>
+            {{#with price}}
+              <ul class='list-group'>
+                <li class='list-group-item'>base: {{base}}</li>
+                <li class='list-group-item'>destination: {{destination}}</li>
+                <li class='list-group-item'>navigation: {{options.navigation}}</li>
+                <li class='list-group-item'>moonroof: {{options.moonroof}}</li>
+                <li class='list-group-item'>premium_paint: {{options.premium_paint}}</li>
+              </ul>
+              <div class='card-footer'>
+                <h6>
+                  total:
+                  <span class='badge text-bg-success rounded-pill'>
+                    {{total}}
+                  </span>
+                </h6>
+              </div>
+            {{/with}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

@@ -1,0 +1,90 @@
+<main class='p-5'>
+  <div class='row g-5'>
+    <section class='col-12 p-3'>
+      <div class='card'>
+        <div class='card-body'>
+          <h1 class='card-title'>{{name}}</h1>
+          <p>{{description}}</p>
+          {{history.year}},
+          {{history.founder}}
+        </div>
+      </div>
+    </section>
+
+    <section class='col-4 p-3'>
+      <div class='dropdown'>
+        <button class='btn btn-secondary dropdown-toggle' type='button' data-bs-toggle='dropdown'> Select type </button>
+        <ul class='dropdown-menu'>
+          {{#each types}}
+            <li> <a class='dropdown-item' href='#'>{{this}}</a> </li>
+          {{/each}}
+        </ul>
+      </div>
+    </section>
+
+    <section class='col-12 p-3'>
+      <div class='p-3'>Syntax</div>
+      <div class='row'>
+        {{#each syntax}}
+          <div class='col-2'>
+            <div class='card'>
+              <div class='card-header'>
+                <div>{{@key}}</div>
+              </div>
+              <ul class='list-group'>
+                {{#each this}}
+                  <li class='list-group-item'> {{this}} </li>
+                {{/each}}
+              </ul>
+            </div>
+          </div>
+        {{/each}}
+      </div>
+    </section>
+
+    <section class='col-4 p-3'>
+      <div class='card'>
+        <div class='card-header'>
+          <div>Features</div>
+        </div>
+        <ul class='list-group'>
+          {{#each features}}
+            <li class='list-group-item'> {{this}} </li>
+          {{/each}}
+        </ul>
+      </div>
+    </section>
+
+    <section class='col-4 p-3'>
+      <div class='card'>
+        <div class='card-header'>
+          <div>Libraries</div>
+        </div>
+        <ul class='list-group'>
+          {{#each libraries}}
+            <li class='list-group-item'> {{this}} </li>
+          {{/each}}
+        </ul>
+      </div>
+    </section>
+
+    <section class='col-4 p-3'>
+      <div class='card'>
+        <div class='card-header'>
+          <div>Tools</div>
+        </div>
+        <ul class='list-group'>
+          {{#each tools}}
+            <li class='list-group-item'> {{this}} </li>
+          {{/each}}
+        </ul>
+      </div>
+    </section>
+
+    <section class='p-3'>
+      {{#each community}}
+        <a href={{type}} class='btn btn-secondary'> {{name}} </a>
+      {{/each}}
+    </section>
+  </div>
+</main>
