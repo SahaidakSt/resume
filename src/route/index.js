@@ -696,6 +696,7 @@ router.get('/mac', function (req, res) {
 
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('mac', {
+    layout: 'basic',
     name: 'Apple MacBook Pro',
     description: 'The ultimate notebook for power users',
     price: 1999.99,
@@ -705,7 +706,7 @@ router.get('/mac', function (req, res) {
         brand: 'Intel',
         model: 'Core i9',
         speed: '2.3 GHz',
-        cores: 8,
+        cores: '8 core',
         cache: '16 MB',
       },
       memory: {
