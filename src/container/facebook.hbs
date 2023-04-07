@@ -1,0 +1,112 @@
+<main class='p-5'>
+  <div class='row'>
+    <div class='col-12'>
+      <h1 class='mx-3'>{{name}}</h1>
+      {{#each users}}
+        <div class='card m-3'>
+          <div class='card-body mx-3'>
+            <div>id: {{id}}</div>
+            <div>name: {{name}}</div>
+            <div>gender: {{gender}}</div>
+            <div>age: {{age}}</div>
+            {{#if friends}}
+              <div>friends:
+                {{#each friends}}
+                  <div class='card my-3'>
+                    <div class='card-body mx-3'>
+                      <div>id: {{id}}</div>
+                      <div>name: {{name}}</div>
+                      <div>gender: {{gender}}</div>
+                      <div>age: {{age}}</div>
+                      {{#if mutual_friends}}
+                        <div>mutual friends:
+                          {{#each mutual_friends}}
+                            <div class='card my-3'>
+                              <div class='card-body mx-3'>
+                                <div>id: {{id}}</div>
+                                <div>name: {{name}}</div>
+                                <div>gender: {{gender}}</div>
+                                <div>age: {{age}}</div>
+                                {{#if mutual_friends}}
+                                  <div>mutual friends:
+                                    {{#each mutual_friends}}
+                                      <div class='card my-3'>
+                                        <div class='card-body mx-3'>
+                                          <div>id: {{id}}</div>
+                                          <div>name: {{name}}</div>
+                                          <div>gender: {{gender}}</div>
+                                          <div>age: {{age}}</div>
+                                        </div>
+                                      </div>
+                                    {{/each}}
+                                  </div>
+                                {{/if}}
+                              </div>
+                            </div>
+                          {{/each}}
+                        </div>
+                      {{/if}}
+                      {{#if groups}}
+                        <div>groups:
+                          {{#each groups}}
+                            <div class='card my-3'>
+                              <div class='card-body mx-3'>
+                                <div>id: {{id}}</div>
+                                <div>name: {{name}}</div>
+                                <div>description: {{description}}</div>
+                                {{#if members}}
+                                  <div>members:
+                                    {{#each members}}
+                                      <div class='card my-3'>
+                                        <div class='card-body mx-3'>
+                                          <div>id: {{id}}</div>
+                                          <div>name: {{name}}</div>
+                                          <div>gender: {{gender}}</div>
+                                          <div>age: {{age}}</div>
+                                        </div>
+                                      </div>
+                                    {{/each}}
+                                  </div>
+                                {{/if}}
+                              </div>
+                            </div>
+                          {{/each}}
+                        </div>
+                      {{/if}}
+                    </div>
+                  </div>
+                {{/each}}
+              </div>
+            {{/if}}
+            {{#if groups}}
+              groups:
+              {{#each groups}}
+                <div class='card my-3'>
+                  <div class='card-body mx-3'>
+                    <div>id: {{id}}</div>
+                    <div>name: {{name}}</div>
+                    <div>description: {{description}}</div>
+                    {{#if members}}
+                      <div>members:
+                        {{#each members}}
+                          <div class='card my-3'>
+                            <div class='card-body mx-3'>
+                              <div>id: {{id}}</div>
+                              <div>name: {{name}}</div>
+                              <div>gender: {{gender}}</div>
+                              <div>age: {{age}}</div>
+                            </div>
+                          </div>
+                        {{/each}}
+                      </div>
+                    {{/if}}
+                  </div>
+                </div>
+              {{/each}}
+            {{/if}}
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</main>
