@@ -1,55 +1,44 @@
-<main>
-  <div class='row g5'>
+<main class='p-5'>
+  <div class='row'>
     {{#with navigation}}
-      <section class='col-12'>
+      <section class='col-12 mb-3'>
         {{#each links}}
           <a href={{href}} class='btn btn-link'>{{text}}</a>
         {{/each}}
         {{#with button}}
-          <a
-            href={{href}}
-            class='btn btn-primary'
-          >{{text}}</a>
+          <a href={{href}} class='btn btn-primary'>{{text}}</a>
         {{/with}}
       </section>
     {{/with}}
-
     {{#with header}}
-      <section class='col-12'>
-        <div class='card'>
+      <section class='col-12 mb-3'>
+        <div class='card mb-3'>
           <div class='card-body'>
-            <h1 class='card-title'>{{title}}</h1>
+            <h1 class='card-title mb-3'>{{title}}</h1>
             <p>{{description}}</p>
-            <a
-              href={{button.link}}
-              class='btn btn-primary'
-            >{{button.text}}</a>
+            <a href={{button.link}} class='btn btn-primary'>{{button.text}}</a>
           </div>
         </div>
       </section>
     {{/with}}
-
     {{#with city}}
-      <h2>{{title}}</h2>
+      <h2 class='mb-3'>{{title}}</h2>
       {{#each cards}}
-        <section class='col-5'>
+        <section class='col-5 mb-3'>
           <div class='card'>
             <img src={{picture.src}} alt={{picture.alt}} />
             <div class='card-body'>
               <h5 class='card-title'>{{title}}</h5>
               <p>{{description}}</p>
-              <a
-                href={{button.href}}
-                class='btn btn-primary'
-              >{{button.text}}</a>
+              <a href={{button.href}} class='btn btn-primary'>{{button.text}}</a>
             </div>
           </div>
         </section>
       {{/each}}
     {{/with}}
-
+    <hr class='my-5' />
     {{#with winner}}
-      <h2>{{title}}</h2>
+      <h2 class='mb-3'>{{title}}</h2>
       {{#with table}}
         <section class='col-12'>
           <table class='table table-bordered'>
@@ -74,11 +63,11 @@
         </section>
       {{/with}}
     {{/with}}
-
+    <hr class='my-5' />
     {{#with gallery}}
-      <h2>{{title}}</h2>
+      <h2 class='mb-3'>{{title}}</h2>
       {{#each cards}}
-        <section class='col-4'>
+        <section class='col-4 mb-3'>
           <div class='card'>
             <div class='card-header'>
               <div>{{name}}</div>
@@ -92,16 +81,14 @@
         </section>
       {{/each}}
     {{/with}}
-
+    <hr class='my-5' />
     {{#with relaxion}}
-      <div class='display-3'>{{title}}</div>
-      <section class='col-9'>
+      <div class='display-3 mb-3'>{{title}}</div>
+      <section class='col-9 mb-3'>
         <div class='row g-5'>
           {{#each cards}}
             <div class='col-6'>
-              <div
-                class='card text-bg-secondary text-center'
-              >
+              <div class='card text-bg-secondary text-center'>
                 <div class='card-header'>{{header}}</div>
                 <div class='card-body text-center'>
                   <h6 class='card-title'>{{title}}</h6>
@@ -113,18 +100,14 @@
         </div>
       </section>
     {{/with}}
-
+    <hr class='my-5' />
     {{#with rest}}
       {{#each cards}}
         <section class='col-5'>
           <div class='card'>
-            <div
-              class='card-header text-center'
-            >{{header}}</div>
+            <div class='card-header text-center'>{{header}}</div>
             <div class='card-body'>
-              <h5
-                class='card-title text-center'
-              >{{title}}</h5>
+              <h5 class='card-title text-center mb-3'>{{title}}</h5>
               <p class='text-center'>{{description}}</p>
               <div class='text-center'>
                 <button class='btn btn-primary text-center'>
@@ -132,16 +115,14 @@
                 </button>
               </div>
             </div>
-            <div
-              class='card-footer text-center'
-            >{{footer}}</div>
+            <div class='card-footer text-center'>{{footer}}</div>
           </div>
         </section>
       {{/each}}
     {{/with}}
-
+    <hr class='my-5' />
     {{#with proposition}}
-      <div class='display-2'>{{title}}</div>
+      <div class='display-2 mb-3'>{{title}}</div>
       {{#each card}}
         <section class='col-5'>
           <div class='card text-light text-bg-warning'>
@@ -154,18 +135,15 @@
         </section>
       {{/each}}
     {{/with}}
-
+    <hr class='my-5' />
     {{#with footer}}
-      <h5>{{title}}</h5>
+      <h5 class='mb-3'>{{title}}</h5>
       <section class='col-2'>
         <div class='card'>
           {{#each navigation}}
             <ul class='list-group'>
               <li class='list-group-item'>
-                <a
-                  class='btn btn-link'
-                  href='{{href}}'
-                >{{text}}</a>
+                <a class='btn btn-link' href='{{href}}'>{{text}}</a>
               </li>
             </ul>
           {{/each}}
@@ -177,10 +155,7 @@
           {{#each socialMedia}}
             <ul class='list-group'>
               <li class='list-group-item'>
-                <a
-                  class='btn btn-outline-dark'
-                  href='{{link}}'
-                >{{name}}</a>
+                <a class='btn btn-outline-dark' href='{{link}}'>{{name}}</a>
               </li>
             </ul>
           {{/each}}
@@ -192,10 +167,7 @@
           {{#each partners}}
             <ul class='list-group'>
               <li class='btn btn-link list-group-item'>
-                <a
-                  class='btn btn-outline-info'
-                  href='{{link}}'
-                >{{name}}</a>
+                <a class='btn btn-outline-info' href='{{link}}'>{{name}}</a>
               </li>
             </ul>
           {{/each}}
